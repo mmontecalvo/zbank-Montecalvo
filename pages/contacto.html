@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zbank</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/favicon.png">
+</head>
+<body>
+    <header id="main-header">
+        <nav class="main-header__nav">
+            <picture class="nav__logo">
+                <a href="../index.html"> <!--para que vuelva al principio de la página-->
+                    <img class="logo__img" src="../img/zbank.png" alt="logo de la empresa">
+                </a>
+            </picture>
+            <ul class="nav__menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="./quienessomos.html">¿Quiénes somos?</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./precios.html">Precios</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./seguridad.html">Seguridad</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link active-page" href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contacto" class="main-content">
+        <section class="main-content__contact-forms">
+            <h1 class="main-content__title">¿Necesitás ponerte en contacto con nosotr@s?</h1>
+            <p class="contact-forms__text">Te mostramos nuestros medios de contacto</p>
+            <div class="contact-forms__way-box">
+                <article class="contact-forms__way">
+                    <h3 class="way__title">Chat de la app</h3>
+                    <p class="way__text">Chateá con nosotros desde la app de zBank de lunes a domingo las 24hs. Iniciá el chat, escribí tu consulta y quedate en línea para que podamos responderte.</p>
+                    <img src="../img/contacto/whatsappicon.png" alt="ícono de whatsapp." class="way__icon">
+                </article>
+                <article class="contact-forms__way">
+                    <h3 class="way__title">Email</h3>
+                    <p class="way__text">Podés escribirnos por mail a informes@zbank.com cualquier día de la semana, a cualquier hora. Acordate de incluir tu número de DNI y el detalle de tu consulta.</p>
+                    <img src="../img/contacto/emailicon.png" alt="ícono de email representado por un sobre." class="way__icon">
+                </article>
+                <article class="contact-forms__way">
+                    <h3 class="way__title">Redes sociales</h3>
+                    <p class="way__text">Estamos para ayudarte en Facebook, Instagram y Twitter, de lunes a viernes de 9 a 18 hs.</p>
+                    <ul>
+                        <li>
+                            <img src="../img/contacto/facebookicon.png" alt="ícono de facebook." class="way__icon">
+                        </li>
+                        <li>
+                            <img src="../img/contacto/instagramicon.png" alt="ícono de instagram." class="way__icon">
+                        </li>
+                        <li>
+                            <img src="../img/contacto/twittericon.png" alt="ícono de twitter." class="way__icon">
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="main-content__form">
+            <h2 class="form__title">También podés mandarnos tu consulta llenando el siguiente formulario:</h2>
+            <form>
+                <div class="form__write">
+                    <input class="contact__box" type="text" name="nombre y apellido" value="Nombre y apellido">
+                    <input class="contact__box" type="email" name="email" value="Email">
+                    <input class="contact__box contact__box--height" type="textarea" name="mensaje" value="Mensaje">
+                </div>
+                <div class="form__check">
+                    <input class="form__checkbox" type="checkbox" name="acepta" value="1">
+                <p class="form__textcheckbox">Deseo recibir información vía e-mail.</p>
+                </div>
+                <input class="form__send" type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer id="main-footer">
+        <section class="main-footer__links">
+            <article class="links__nav">
+                <h5 class="nav__title">Navegación</h5>
+                <ul class="nav__footer-menu">
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="../pages/quienessomos.html">¿Quiénes somos?</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="../pages/precios.html">Precios</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="../pages/seguridad.html">Seguridad</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link active-page" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="links__nav">
+                <h5 class="nav__title">Legales</h5>
+                <ul class="nav__footer-menu">
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="">Términos y condiciones</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="">Políticas de privacidad</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="">Información al usuario</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="">Promociones vigentes</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="">Preguntas frecuentes</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="links__dowload">
+                <ul class="dowload__icon">
+                    <li>
+                        <a href="https://www.apple.com/la/app-store/">
+                            <img class="icon__app" src="../img/footer/appstore.png" alt="ícono de descarga para AppStore"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store">
+                            <img class="icon__app" src="../img/footer/googleplay.png" alt="ícono de descarga para Google PlayStore"/>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <article class="links__media">
+                <ul class="media">
+                    <li class="media__icon">
+                        <a href="https://twitter.com/">
+                            <img class="media__icon--design" src="../img/footer/twitter.png" alt="ícono de twitter">
+                        </a>
+                    </li>
+                    <li class="media__icon">
+                        <a href="https://www.instagram.com/">
+                            <img class="media__icon--design" src="../img/footer/instagram.png" alt="ícono de instagram">
+                        </a>
+                    </li>
+                    <li class="media__icon">
+                        <a href="https://www.facebook.com/">
+                            <img class="media__icon--design" src="../img/footer/facebook.png" alt="ícono de facebook">
+                        </a>
+                    </li>
+                    <li class="media__icon">
+                        <a href="https://www.whatsapp.com/">
+                            <img class="media__icon--design" src="../img/footer/whatsapp.png" alt="ícono de whatsapp">
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <h6 class="main-footer__copyright">© 2022 zbank. Todos los derechos reservados. Prohibida la duplicación, distribución o almacenamiento en cualquier medio.</h6>
+    </footer>
+</body>
+</html>
