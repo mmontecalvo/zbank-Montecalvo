@@ -7,6 +7,8 @@
     <title>zbank</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" href="../img/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header id="main-header">
@@ -36,39 +38,39 @@
         <h1 class="main-content__title">Tu seguridad como prioridad</h1>
         <section class="main-content__item">
             <p class="item__text">Seguimos las mejores prácticas en cyberseguridad sin complicarte tu operación diaria.</p>
-            <img src="../img/seguridad/unlock.png" alt="Vista de la pantalla de desbloqueo de la aplicación, puede ser por pin o por huella digital." class="item__img-smartphone">
-            <article class="item__characteristic item__characteristic1">
+            <img data-aos="zoom-in-right" data-aos-duration='2000' src="../img/seguridad/unlock.png" alt="Vista de la pantalla de desbloqueo de la aplicación, puede ser por pin o por huella digital." class="item__img-smartphone">
+            <article class="item__characteristic item__characteristic1" data-aos="zoom-in" data-aos-duration='2000'>
                 <h3 class="characteristic__title">Biometría</h3>
                 <p class="characteristic__text">Nuestra tecnología te permite acceder a tu cuenta usando tu huella digital.</p>
                 <img src="../img/seguridad/fingerprint.png" alt="ícono de biometría representado por una huella digital." class="item__icon">
             </article>
-            <article class="item__characteristic item__characteristic2">
+            <article class="item__characteristic item__characteristic2" data-aos="zoom-in" data-aos-duration='2000'>
                 <h3 class="characteristic__title">Segundo factor</h3>
                 <p class="characteristic__text">Usamos un Token invisible para todas las operaciones que hagas.</p>
                 <img src="../img/seguridad/key.png" alt="ícono de segundo factor representado por una llave." class="item__icon">
             </article>
-            <article class="item__characteristic item__characteristic3">
+            <article class="item__characteristic item__characteristic3" data-aos="zoom-in" data-aos-duration='2000'>
                 <h3 class="characteristic__title">Personal</h3>
                 <p class="characteristic__text">Vas a poder ingresar desde un dispositivo a la vez a tu cuenta.</p>
                 <img src="../img/seguridad/user.png" alt="ícono de personal representado por una persona." class="item__icon">
             </article>
-            <article class="item__characteristic item__characteristic4">
+            <article class="item__characteristic item__characteristic4" data-aos="zoom-in" data-aos-duration='2000'>
                 <h3 class="characteristic__title">100% encriptado</h3>
                 <p class="characteristic__text">Todas las transacciones son encriptadas para tu mayor seguridad.</p>
                 <img src="../img/seguridad/encrypted.png" alt="ícono de encriptado representado por un ícono de cpu." class="item__icon">
             </article>
         </section>
-        <section class="main-content__feature main-content__feature1">
+        <section class="main-content__feature main-content__feature1" data-aos="fade-right" data-aos-duration='2000'>
             <h2 class="feature__title feature__title1">Seguridad desde sus orígenes</h2>
             <p class="feature__text feature__text1">Queremos que te sientas seguro, por eso desde la concepción de este Banco Digital, uno de nuestros pilares es la seguridad. Todos los datos intercambiados entre <span class="name">zBank</span> y vos viajan cifrados de modo que no puedan ser leídos ni modificados por terceros. Además, todos los datos sensibles, como tu clave, se encuentran encriptados (solo vos podés saber su contenido). Adicionalmente todo el equipo de zBank utililiza los estándares más altos de seguridad durante el proceso de desarrollo.</p>
             <img src="../img/seguridad/encrypted.jpg" alt="imagen de un candado con una clave escrita en código binario." class="feature__img feature__img1">
         </section>
-        <section class="main-content__feature main-content__feature2">
+        <section class="main-content__feature main-content__feature2" data-aos="fade-left" data-aos-duration='2000'>
             <h2 class="feature__title feature__title2">Notificaciones en tiempo real</h2>
             <p class="feature__text feature__text2">Cada vez que uses tu tarjeta <span class="name">zBank</span>, hagas transferencias o cargues plata en tu cuenta vas a recibir notificaciones en tu celular. Esta es una excelente forma de mantenerse al día sobre la actividad que se lleva a cabo en tu cuenta. También proporciona un nivel adicional de seguridad, ya que dificultan que cualquier actividad fraudulenta pase inadvertida.</p>
             <img src="../img/seguridad/notification.jpg" alt="imagen de un hombre sosteniendo un celular tras recibir una notificación." class="feature__img feature__img2">
         </section>
-        <section class="main-content__feature main-content__feature3">
+        <section class="main-content__feature main-content__feature3" data-aos="fade-right" data-aos-duration='2000'>
             <h2 class="feature__title feature__title3">¿Perdiste tu celular o tarjeta?</h2>
             <p class="feature__text feature__text3">Si no encontrás tu tarjeta, podés pausarla al instante desde la aplicación, y así evitar que una persona realice compras online o en comercios. Si luego la encontrás tenés la posibilidad de volver a activarla y retomar su uso sin problemas. Si confirmás la pérdida o la misma te fue robada, podés denunciarla y solicitar una tarjeta de reemplazo directamente desde la aplicación. Si pediste el acceso a tu celular ya sea por robo, rotura o extravío, tenés que ingresar al link de Reporte y extravío e informarnos el incidente. De esta forma desvincularemos automáticamente el dispositivo y el atacante, por más que conozca tu clave o tenga tu celular, no va a poder ingresar a tu cuenta de <span class="name">zBank</span>.</p>
             <img src="../img/seguridad/lostwallet.jpg" alt="imagen de una billetera tirada en el piso, y su dueña yéndose del lugar sin darse cuenta." class="feature__img feature__img3">
@@ -154,5 +156,9 @@
         </section>
         <h6 class="main-footer__copyright">© 2022 zbank. Todos los derechos reservados. Prohibida la duplicación, distribución o almacenamiento en cualquier medio.</h6>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

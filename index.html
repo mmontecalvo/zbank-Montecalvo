@@ -7,6 +7,8 @@
     <title>zbank</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="./img/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header id="main-header">
@@ -60,28 +62,28 @@
             </picture>
         </section>
         <section class="main-content__feature">
-            <article class="feature">
+            <article class="feature" data-aos="zoom-in" data-aos-duration='2000'>
                 <div class="feature__icon">
                     <img class="icon__img" src="./img/home/sale.png" alt="ícono de etiqueta de oferta.">
                 </div>
                 <h2 class="feature__title">Sin costos de mantenimiento</h2>
                 <p class="feature__text">Sin cuotas mensuales. Ya sea a nivel personal o empresarial.</p>
             </article>
-            <article class="feature">
+            <article class="feature" data-aos="zoom-in" data-aos-duration='2000'>
                 <div class="feature__icon">
                     <img class="icon__img" src="./img/home/phone.png" alt="ícono de smartphone.">
                 </div>
                 <h2 class="feature__title">Registro 100% digital</h2>
                 <p class="feature__text">Abra su cuenta en minutos desde su celular.</p>
             </article>
-            <article class="feature">
+            <article class="feature" data-aos="zoom-in" data-aos-duration='2000'>
                 <div class="feature__icon">
                     <img class="icon__img" src="./img/home/bank.png" alt="ícono de banco central.">
                 </div>
                 <h2 class="feature__title">Cta. bancaria aprobada</h2>
                 <p class="feature__text">Estamos autorizados y regulados por el Banco Central.</p>
             </article>
-            <article class="feature">
+            <article class="feature" data-aos="zoom-in" data-aos-duration='2000'>
                 <div class="feature__icon">
                     <img class="icon__img" src="./img/home/atention.png" alt="ícono de atención al cliente 24/7.">
                 </div>
@@ -91,7 +93,7 @@
         </section>
         <section class="main-content__steps">
             <h3 class="steps__title">Solicitá tu tarjeta de débito en 3 simples pasos</h3>
-            <article class="steps steps1">
+            <article class="steps steps1" data-aos="fade-right" data-aos-duration='2000'>
                 <h4 class="steps__num steps__num1">1</h4>
                 <h5 class="steps__subtitle steps__subtitle1">Solicitud</h5>
                 <p class="steps__text steps__text1">Completá el registro con tus datos desde la app y obtené tu tarjeta virtual.</p>
@@ -99,7 +101,7 @@
                     <img class="steps__img steps__img1" src="./img/home/cardrequest.png" alt="imagen1">
                 </picture>
             </article>
-            <article class="steps steps2">
+            <article class="steps steps2" data-aos="fade-left" data-aos-duration='2000'>
                 <h4 class="steps__num steps__num2">2</h4>
                 <h5 class="steps__subtitle steps__subtitle2">Recepción</h5>
                 <p class="steps__text steps__text2">Recibí tu tarjeta zbank dentro de los 15 días hábiles, gratis y en todo el país.</p>
@@ -107,7 +109,7 @@
                     <img class="steps__img steps__img2" src="./img/home/cardreception.png" alt="imagen2">
                 </picture>
             </article>
-            <article class="steps steps3">
+            <article class="steps steps3" data-aos="fade-right" data-aos-duration='2000'>
                 <h4 class="steps__num steps__num3">3</h4>
                 <h5 class="steps__subtitle steps__subtitle3">Activación</h5>
                 <p class="steps__text steps__text3">¡Activá tu tarjeta desde la app y cargá saldo para empezar a usarla!</p>
@@ -197,5 +199,9 @@
         </section>
         <h6 class="main-footer__copyright">© 2022 zbank. Todos los derechos reservados. Prohibida la duplicación, distribución o almacenamiento en cualquier medio.</h6>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
