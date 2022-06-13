@@ -58,9 +58,19 @@ a:hover{
 /* HEADER */
 
 #main-header{
+    z-index: 100;
+    background: var(--base);
     width: 100%;
+    height: auto;
     border-bottom: var(--spacing-shadow) solid var(--primary);
     box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--primary);
+}
+#main-header .navbar-collapse{
+    flex-grow: 0;
+}
+#main-header .navbar-toggler{
+    border: 0.3rem solid var(--primary);
+    background-color: var(--primary);
 }
 #main-header .main-header__nav{
     display: flex;
@@ -68,7 +78,6 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-small);
-    height: 10rem;
     max-width: 1200px;
 }
 #main-header .logo__img{
@@ -81,11 +90,17 @@ a:hover{
 }
 #main-header .menu__link{
     font-size: var(--text-base);
+    color: var(--primary);
+}
+#main-header .menu__link:hover{
+    color: var(--secondary);
 }
 
 /* FOOTER */
 
 #main-footer{
+    position: relative;
+    margin-top: 10rem;
     background: var(--base);
     display: flex;
     flex-direction: column;
@@ -125,6 +140,11 @@ a:hover{
     box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--alternative);
     margin-bottom: var(--spacing-small);
 }
+#main-footer .media__icon:hover{
+    background: var(--secondary);
+    border: var(--spacing-shadow) solid var(--secondary);
+    box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--secondary);
+}
 #main-footer .media__icon--design{
     height: 2.5rem;
 }
@@ -138,7 +158,14 @@ a:hover{
     box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--alternative);
     margin-bottom: var(--spacing-small);
 }
+#main-footer .icon__app:hover{
+    border: var(--spacing-shadow) solid var(--secondary);
+    box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--secondary);
+}
 #main-footer a{
+    padding: 0;
+}
+#main-footer ul{
     padding: 0;
 }
 #main-footer .main-footer__copyright{
@@ -147,8 +174,6 @@ a:hover{
     color: var(--primary);
     margin-top: var(--spacing-large);
 }
-
-/* HOME */
 
 /* MAIN */
 
@@ -159,6 +184,8 @@ a:hover{
     flex-direction: column;
     align-items: center;
 }
+
+/* HOME */
 
 /* BANNER */
 
@@ -177,47 +204,45 @@ a:hover{
 
 /* COVER */
 
-#home .main-content__cover{
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-#home .cover{
+#home .main-content__cover .cover{
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    gap: var(--spacing-large);
 }
 #home .cover__slogan{
-    width: 100%;
     line-height : var(--text-large);
     font-size: var(--text-large);
     font-family: var(--font-title);
     color: var(--secondary);
+    margin: 0;
 }
 #home .cover__text{
-    width: 100%;
     line-height : var(--text-medium);
     font-size: var(--text-medium);
     font-weight: bold;
     color: var(--text-color);
-    padding-top: var(--spacing-large);
+    margin: 0;
 }
 #home .cover__dowload{
     display: flex;
-    padding-top: var(--spacing-large);
     gap: var(--spacing-medium);
+    margin: 0;
+    padding: 0;
 }
 #home .main-content__cover .dowload__icon{
-    height: 6rem;
+    height: 5rem;
+    width: auto;
     border: var(--spacing-shadow) solid var(--alternative);
     border-radius: 1rem;
     box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--alternative);
 }
+#home .main-content__cover .dowload__icon:hover{
+    border: var(--spacing-shadow) solid var(--secondary);
+    box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--secondary);
+}
 #home .cover__img{
-    width: 50%;
-    display: flex;
-    justify-content: center;
     transition: transform .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 #home .cover__img:hover{
@@ -336,7 +361,9 @@ a:hover{
     grid-column: 9/13; 
 }
 #home .steps__img1{
-    transform: rotate(15deg);  
+    transform: rotate(15deg);
+    position: relative;
+    left: -10rem;
 }
 #home .steps2{
     display: grid;
@@ -812,13 +839,7 @@ a:hover{
 
 /* CONTACT FORMS */
 
-#contacto .main-content__contact-forms{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 #contacto .main-content__title{
-    width: 60%;
     line-height : var(--text-large);
     font-size: var(--text-large);
     letter-spacing: var(--spacing-xsmall);
@@ -830,6 +851,7 @@ a:hover{
 #contacto .contact-forms__text{
     font-size: var(--text-medium);
     color: var(--text-color);
+    width: auto;
     justify-self: center;
     margin: var(--spacing-large) 0;
 }
@@ -843,10 +865,8 @@ a:hover{
 }
 #contacto .contact-forms__way{
     padding: var(--spacing-small);
-    width: 30rem;
-    min-width: 30rem;
-    height: 17rem;
-    min-height: 17rem;
+    width: 35rem;
+    height: auto;
     border: var(--spacing-shadow) solid var(--alternative);
     border-radius: 1rem;
     box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--alternative);
@@ -889,6 +909,10 @@ a:hover{
 
 /* FORM */
 
+#contacto form{
+    width: 90%;
+    margin: auto;
+}
 #contacto .form__write{
     display: flex;
     flex-direction: column;
@@ -900,27 +924,41 @@ a:hover{
     font-family: var(--font-title);
     color: var(--secondary);
     margin: var(--spacing-large) 0;
+    text-align: center;
 }
 #contacto .contact__box{
-    margin: var(--spacing-small) 0;
-    padding: var(--spacing-small);
-    line-height: 5rem;
+    margin-bottom: var(--spacing-medium);
+    height: 7rem;
     background: #141418;
-    color: var(--primary);
+    color: var(--text-color);
     font-weight: bold;
     font-size: var(--text-base);
     border: none;
     border-bottom: var(--spacing-shadow) solid #9460b5;
 }
-#contacto .contact__box--height{
-    height: 15rem;
+.form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown), .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown){
+    padding-top: var(--spacing-large);
 }
-#contacto .form__check{
-    display: flex;
+#contacto textarea{
+    border: none;
 }
-#contacto .form__checkbox{
-    display: inline;
+#contacto .form-control:focus{
+    box-shadow: 0 0 var(--spacing-small) var(--spacing-shadow) var(--primary);
 }
+#contacto .form-floating > label{
+    padding: var(--spacing-small);
+    color: var(--primary);
+    font-family: var(--principal);
+    font-size: var(--text-base);
+}
+#contacto .form-check-input{
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
 #contacto .form__textcheckbox{
     font-size: var(--text-small);
     color: var(--text-color);
@@ -930,12 +968,17 @@ a:hover{
 #contacto .form__send{
     height: 5rem;
     width: 100%;
-    background: var(--primary);
     color: var(--text-color);
     font-weight: bold;
     font-size: var(--text-base);
     margin-bottom: var(--spacing-large);
 }
+.btn-primary {
+    --bs-btn-bg: #141418;
+    --bs-btn-border-color: #141418;
+    --bs-btn-hover-bg: var(--primary);
+    --bs-btn-hover-border-color: var(--primary);
+  }
 
 /* RESPONSIVE */
 
@@ -988,6 +1031,7 @@ a:hover{
     }
     #home .steps__img1{
         height: 36rem;
+        left: 0;
     }
     #home .steps2{
         grid-template-columns: repeat(12, 1fr);
@@ -1165,22 +1209,18 @@ a:hover{
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 991px){
     /* HEADER */
-    #main-header .main-header__nav{
+    #main-header .navbar-nav{
+        display: flex;
         flex-direction: column;
-        height: auto;
-        gap: var(--spacing-small);
-    }
-    #main-header .logo__img{
-        height: 4rem;
-    }
-    #main-header .nav__menu{
-        flex-direction: column;
-        gap: var(--spacing-small);
+        padding: var(--spacing-medium);
         align-items: center;
     }
+}
 
+@media screen and (max-width: 600px){
+    
     /* FOOTER */
     #main-footer .main-footer__links{
         flex-direction: column;
@@ -1202,6 +1242,9 @@ a:hover{
         height: 24rem;
     }
     /* COVER */
+    #home .row{
+        justify-content: center;
+    }
     #home .main-content__cover{
         flex-direction: column;
     }
@@ -1216,10 +1259,10 @@ a:hover{
     #home .cover__text{
         line-height : 2rem;
         font-size: 2rem;
-        padding-top: var(--spacing-medium);
+        padding-top: var(--spacing-small);
     }
     #home .cover__dowload{
-        padding: var(--spacing-medium) 0;
+        padding: var(--spacing-small) 0 var(--spacing-large);
         align-self: center;
     }
     #home .cover__img{
@@ -1324,9 +1367,7 @@ a:hover{
         grid-row: 5;
         grid-column: 1/3; 
     }
-    #home .steps__img3{
-        height: 100%; 
-    }
+    
 
     /* ¿QUIENES SOMOS? */
     /* HISTORY */
@@ -1533,9 +1574,8 @@ a:hover{
         font-size: 2rem;
         text-align: center;
     }
-    #contacto .contact-forms__way-box{
-        flex-direction: column;
-        gap: var(--spacing-medium);
+    #contacto .contact-forms__way{
+        max-width: 90%;
     }
     #contacto .way__title{
         font-family: 2rem;
@@ -1543,35 +1583,10 @@ a:hover{
         grid-column: 1/6;
     }
     /* FORM */
-    #contacto .form__write{
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-    }
     #contacto .form__title{
         font-size: 2rem;
         text-align: center;
         margin: var(--spacing-medium) 0;
     }
-    #contacto .contact__box{
-        line-height: 3rem;
-    }
-    #contacto .contact__box--height{
-        height: 10rem;
-    }
-    #contacto .form__send{
-        height: 3rem;
-    }
 }
-@media screen and (min-width: 560px){
-    /* HEADER */
-    #main-header .main-header__nav{
-            flex-direction: row;
-    }
-    #main-header .logo__img{
-            height: 5rem;
-    }
-    #main-header .nav__menu{
-            flex-direction: row;
-    }
-}
+
