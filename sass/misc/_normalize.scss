@@ -1,0 +1,40 @@
+/* NORMALIZE */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: $background;
+    font-family: $principal;
+    overflow-x: hidden;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    padding: $spacing-s;
+    font-family: $principal;
+    color: $primary;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.active-page{
+    border-bottom: 1px solid $primary;
+}
+a:hover{
+    color: $secondary;  
+}
+
+/* MAIN */
+.main-content{
+    max-width: 1200px;
+    margin: auto;
+}

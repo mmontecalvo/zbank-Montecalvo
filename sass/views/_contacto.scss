@@ -1,0 +1,177 @@
+/* CONTACTO */
+
+#contacto{
+    .main-content__contact-forms{
+        font-size: $text-desktop;
+        .main-content__title{
+            line-height : $lh;
+            font-size: $text-xl;
+            letter-spacing: $spacing-xs;
+            font-family: $font-title;
+            color: $secondary;
+            text-align: center;
+            margin-top: $spacing-l;
+        }
+        .contact-forms__text{
+            font-size: $text-m;
+            color: $text-color;
+            width: auto;
+            justify-self: center;
+            margin: $spacing-l 0;
+        }
+        .contact-forms__way-box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: content;
+            gap: $spacing-m;
+            margin-bottom: $spacing-l;
+            .contact-forms__way{
+                padding: $spacing-s;
+                width: 35rem;
+                height: 18rem;
+                border: $b-desktop solid $alternative;
+                border-radius: 1rem;
+                box-shadow: 0 0 $spacing-s $s-desktop $alternative;
+                display: grid;
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: repeat(6, 1fr);
+                align-items: start;
+                .way__title{
+                    font-family: $font-title;
+                    font-size: $text-m;
+                    letter-spacing: $spacing-xs;
+                    color: $secondary;
+                    margin: 0;
+                    grid-row: 1;
+                    grid-column: 1/6;
+                }
+                .way__text{
+                    font-size: $text-base;
+                    color: $text-color;
+                    grid-row: 2/5;
+                    grid-column: 1/7;
+                    text-align: justify;
+                    hyphens: auto;
+                    padding-top: $spacing-xs;
+                }
+                .way__icon{
+                        grid-row: 1;
+                        grid-column: 6;
+                        justify-self: end;
+                        height: 4rem;
+                        width: 4rem;
+                }
+                ul{
+                    display: flex;
+                    right: 0;
+                    grid-row: 1;
+                    grid-column: 6;
+                    justify-self: end;
+                }
+            }
+        }
+    }
+} 
+.main-content__form{
+    .form__title{
+        font-size: $text-m;
+        letter-spacing: $spacing-xs;
+        font-family: $font-title;
+        color: $secondary;
+        margin: $spacing-l 0;
+        text-align: center;
+    }
+    form{
+        width: 90%;
+        margin: auto;
+        .form__write{
+            display: flex;
+            flex-direction: column;
+            margin: $spacing-l 0 $spacing-s;
+            .form-floating{
+                .contact__box{
+                    margin-bottom: $spacing-m;
+                    height: 7rem;
+                    background: #141418;
+                    color: $text-color;
+                    font-weight: bold;
+                    font-size: $text-base;
+                    border: none;
+                    border-bottom: $s-desktop solid #9460b5;
+                }
+                textarea{
+                    border: none;
+                }
+                label{
+                    padding: $spacing-s;
+                    color: $primary;
+                    font-family: $principal;
+                    font-size: $text-base;
+                }
+                .form-control:focus{
+                    box-shadow: 0 0 $spacing-s $s-desktop $primary;
+                }
+            }
+        }
+        .form-check{
+            .form-check-input{
+                height: 1.6rem;
+                width: 1.6rem;
+                &:checked {
+                    background-color: $primary;
+                    border-color: $primary;
+                }
+            }
+            .form__textcheckbox{
+                font-size: $text-s;
+                color: $text-color;
+                padding-left: $spacing-s;
+                margin-bottom: $spacing-m;
+            }
+        }
+        .form__send{
+            height: 5rem;
+            width: 100%;
+            color: $text-color;
+            font-weight: bold;
+            font-size: $text-base;
+            margin-bottom: $spacing-l;
+        }
+    }
+}
+
+.form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown), .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown){
+    padding-top: $spacing-l;
+}
+
+@media screen and (max-width: 600px){
+    #contacto{
+        .main-content__contact-forms{
+            font-size: $text-intermediate;
+            .main-content__title{
+                width: 100%;
+            }
+            .contact-forms__text{
+                text-align: center;
+            }
+            .contact-forms__way-box{
+                .contact-forms__way{
+                    max-width: 96%;
+                    height: 14rem;
+                    .way__title{
+                        grid-row: 1;
+                        grid-column: 1/6;
+                    }
+                }
+            }
+        }
+        .main-content__form{
+            .form__title{
+                font-size: 2em;
+                text-align: center;
+                margin: $spacing-m 0;
+            }
+        }
+    }
+}
