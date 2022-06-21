@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Raleway:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&display=swap');
+
+/* MISC */
+@import './misc/variables';
+@import './misc/normalize';
+@import './misc/mixins';
+
+/* PARTIALS */
+@import './partials/header';
+@import './partials/footer';
+
+/* VIEWS */
+@import './views/home';
+@import './views/quienessomos';
+@import './views/precios';
+@import './views/seguridad';
+@import './views/contacto';
