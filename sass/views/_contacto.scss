@@ -30,9 +30,6 @@
                 padding: $spacing-s;
                 width: 35rem;
                 height: 18rem;
-                border: $b-desktop solid $alternative;
-                border-radius: 1rem;
-                box-shadow: 0 0 $spacing-s $s-desktop $alternative;
                 display: grid;
                 grid-template-rows: repeat(4, 1fr);
                 grid-template-columns: repeat(6, 1fr);

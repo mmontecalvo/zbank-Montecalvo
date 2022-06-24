@@ -21,10 +21,10 @@
                 align-items: center;
                 height: 4rem;
                 width: 4rem;
-                background: $alternative;
-                border: $b-desktop solid $alternative;
+                animation: fluido 2s ease alternate infinite;
+                background: linear-gradient(60deg, $secondary, $primary, $alternative);
+                background-size: 300%;
                 border-radius: 100%;
-                box-shadow: 0 0 $spacing-s $s-desktop $alternative;
                 img{
                     height: 3rem;
                     width: 3rem;

@@ -5,32 +5,36 @@
     margin: 0;
     padding: 0;
 }
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
+
 body{
     background: $background;
     font-family: $principal;
     overflow-x: hidden;
+    height: auto;
 }
+
 ul{
     list-style-type: none;
 }
+
 a{
     padding: $spacing-s;
     font-family: $principal;
     color: $primary;
     text-decoration: none;
 }
+
 img{
     width: 100%;
 }
-.active-page{
-    border-bottom: 1px solid $primary;
-}
-a:hover{
-    color: $secondary;  
+
+.relleno{
+    height: 9.7rem;
 }
 
 /* MAIN */
@@ -38,3 +42,37 @@ a:hover{
     max-width: 1200px;
     margin: auto;
 }
+
+/* ANIMATIONS */
+.gradient-border {
+    --borderWidth: 3px;
+    background: $background;
+    position: relative;
+    border-radius: var(--borderWidth);
+    
+    &:after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, $secondary, $primary, $alternative);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradient 2s ease alternate infinite;
+        background-size: 300% 300%;
+    }
+}
+
+@keyframes animatedgradient {
+    0% { background-position: 0% 50%;}
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% }
+  }

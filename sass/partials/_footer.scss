@@ -5,74 +5,93 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: $spacing-m;
     border-top: $b-desktop solid $primary;
     box-shadow: 0 0 $spacing-s $s-desktop $primary;
-    padding: $spacing-m;
+
     a{
         padding: 0;
     }
+
     ul{
         padding: 0;
     }
+
     .main-footer__links{
         display: flex;
         justify-content: space-between;
         width: 100%;
         max-width: $max-w;
         margin: auto;
+
         .links__nav{
+
             .nav__title{
                 font-weight: bold;
                 font-size: $text-m;
                 color: $secondary;
             }
+
             .nav__footer-menu{
+
                 .footer-menu__item{
                     margin: $spacing-s 0;
+
                     .footer-menu__link{
                         font-size: $text-base;
                         border: none;
+                        &:hover{
+                            color: $secondary;
+                        }
+                    }
+
+                    .footer-menu__link--active{
+                        color: $alternative;
+                        font-weight: bold;
                     }
                 }
             }
         }
         .links__dowload{
             align-self: center;
-            .icon__app{
-                height: 5rem;
-                border: $b-desktop solid $alternative;
-                border-radius: 1rem;
-                box-shadow: 0 0 $spacing-s $s-desktop $alternative;
+            li{
                 margin-bottom: $spacing-s;
+
                 &:hover{
-                    border: $b-desktop solid $secondary;
-                    box-shadow: 0 0 $spacing-s $s-desktop $secondary;
+                    box-shadow: 0 0 $spacing-s $s-desktop $s-color;
+                }
+
+                .icon__app{
+                    height: 5rem;
                 }
             }
         }
+
         .links__media{
+
             .media__icon{
-                background: $alternative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 4rem;
                 width: 4rem;
-                border: $b-desktop solid $alternative;
-                border-radius: 100%;
-                box-shadow: 0 0 $spacing-s $s-desktop $alternative;
                 margin-bottom: $spacing-s;
+                animation: fluido 2s ease alternate infinite;
+                background: linear-gradient(60deg, $secondary, $primary, $alternative);
+                background-size: 300%;
+                border-radius: 100%;
+
+                &:hover{
+                    box-shadow: 0 0 $spacing-s $s-desktop $s-color;
+                }
+
                 .media__icon--design{
                     height: 2.5rem;
-                }
-                &:hover{
-                    background: $secondary;
-                    border: $b-desktop solid $secondary;
-                    box-shadow: 0 0 $spacing-s $s-desktop $secondary;
                 }
             }
         }
     }
+
     .main-footer__copyright{
         text-align: center;
         font-size: $text-xs;
@@ -85,23 +104,21 @@
     #main-footer{
         border-top: $b-mobile solid $primary;
         box-shadow: 0 0 $spacing-s $s-mobile $primary;
+
         .main-footer__links{
             flex-direction: column;
             align-items: center;
             gap: $spacing-m;
             text-align: center;
+            
             .media{
                 display: flex;
                 gap: $spacing-s;
-                &__icon{
-                    border: $b-mobile solid $alternative;
-                    box-shadow: 0 0 $spacing-s $s-mobile $alternative;
-                    &:hover{
-                        border: $b-mobile solid $secondary;
-                        box-shadow: 0 0 $spacing-s $s-mobile $secondary;
-                    }
+                
+                &__icon:hover{
+                        box-shadow: 0 0 $spacing-s $s-mobile $s-color;
                 }
-            }  
+            }
         }
     }
 }

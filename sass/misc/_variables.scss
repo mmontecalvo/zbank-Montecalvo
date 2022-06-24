@@ -6,25 +6,32 @@ $secondary: #f7547f;
 $alternative: #5ee6bb;
 $text-color: #c3c6e9;
 $background: #000;
+
 /* SPACES */
 $spacing-l: 3rem;
 $spacing-m: 2rem;
 $spacing-s: 1rem;
 $spacing-xs: 0.1rem;
 $max-w: 120rem;
+
 /* BORDERS */
 $b-desktop: 0.2rem;
 $b-mobile: 0.1rem;
+
 /* SHADOWS */
 $s-desktop: 0.2rem;
 $s-mobile: 0.1rem;
+$s-color: rgba(255, 255, 255, 0.75);
+
 /* FONT-FAMILY */
 $principal: 'Raleway', sans-serif;
 $font-title: 'bakbak One', 'cursive';
+
 /* FONT-SIZE REFERENCE */
 $text-desktop: 1rem;
 $text-intermediate: 0.8rem;
 $text-mobile: 0.66rem;
+
 /* FONT-SIZES */
 $text-xl: 5.4em;
 $text-l: 3.6em;
@@ -33,6 +40,7 @@ $text-base: 1.6em;
 $text-s: 1.4em;
 $text-xs: 1.2em;
 $lh: 1em; /* LINE HEIGHT */
+
 .btn-primary {
     --bs-btn-bg: #141418;
     --bs-btn-border-color: #141418;

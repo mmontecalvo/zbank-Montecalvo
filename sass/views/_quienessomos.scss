@@ -17,6 +17,7 @@
                 width: 90%;
                 margin: 0 auto $spacing-l;
             }
+
             .text{
                 font-size: $text-m;
                 color: $text-color;
@@ -26,16 +27,19 @@
                 width: 90%;
                 margin: 0 auto $spacing-l;
             }
+
             span{
                 font-weight: bold;
                 color: $primary;
             }
+
             .main-content__history{
                 background-image: url(../img/quienesomos/buenosaires.jpg);
                 background-size: cover;
                 background-position: center;
                 min-height: 90vh;
                 font-size: $text-desktop;
+
                 .main-content__title{
                     line-height : $lh;
                     font-size: $text-xl;
@@ -45,28 +49,31 @@
                     margin: $spacing-l 0;
                 }
             }
+
             .main-content__values{
                 background-image: url(../img/quienesomos/nature.jpg);
                 background-size: cover;
                 background-position: center;
                 min-height: 90vh;
                 font-size: $text-desktop;
+
                 .subtitle{
-                    padding: $spacing-l 0;
+                    padding: $spacing-l 0 0;
                     text-align: center;
                     font-family: $font-title;
                     font-size: $text-l;
                     color: $secondary;
                     line-height : $lh;
                 }
+
                 .values__value-box{
                     padding: $spacing-s;
-                    border: $b-desktop solid $alternative;
+                    background: linear-gradient(60deg, #f7548041, #9460b53a, #5ee6bb3d);
                     border-radius: 1rem;
-                    box-shadow: 0 0 $spacing-s $s-desktop $alternative;
                     margin: $spacing-l auto;
                     max-width: $max-w;
                     width: 90%;
+
                     .value-box__title{
                         font-size: $text-m;
                         line-height: $lh;
@@ -75,6 +82,7 @@
                         color: $secondary;
                         margin-bottom: $spacing-s;
                     }
+
                     .value-box__text{
                         font-size: $text-base;
                         color: $text-color;
@@ -83,23 +91,27 @@
                     }
                 }    
             }
+
             .main-content__staff-products{
                 background-image: url(../img/quienesomos/personal.jpg);
                 background-size: cover;
                 background-position: center;
                 min-height: 90vh;
                 font-size: $text-desktop;
+
                 .subtitle{
                     padding: $spacing-l 0 0;
                     grid-area: title;
                     text-align: center;
                     font-size: $text-xl;
                 }
+
                 .products{
                     display: flex;
                     justify-content: center;
-                    column-gap: 20rem;
+                    column-gap: 8rem;
                     margin-bottom: $spacing-m;
+
                     .list__title{
                         font-size: $text-l;
                         letter-spacing: $spacing-xs;
@@ -107,10 +119,12 @@
                         color: $secondary;
                         margin-bottom: $spacing-s;
                     }
+
                     .list__item{
                         font-size: $text-m;
                         color: $text-color;
                         font-weight: bold;
+                        
                         img{
                             height: 2.4rem;
                             width: 2.4rem;
@@ -126,18 +140,18 @@
 
 @media screen and (max-width: 959px){
     #quienessomos{
-        .main-content__history{
-            font-size: $text-intermediate;
-        }
-        .main-content__values{
-            font-size: $text-intermediate;
-        }
-        .main-content__staff-products{
-            font-size: $text-intermediate;
-            .products{
-                column-gap: 5rem;
-                .list__item{
-                    font-weight: bold;
+        #carouselExampleIndicators{
+            .carousel-inner{
+                .main-content__history{
+                    font-size: $text-intermediate;
+                }
+        
+                .main-content__values{
+                    font-size: $text-intermediate;
+                }
+        
+                .main-content__staff-products{
+                    font-size: $text-intermediate;
                 }
             }
         }
@@ -145,16 +159,22 @@
 }
 @media screen and (max-width: 600px){
     #quienessomos{
-        .main-content__history{
-            font-size: $text-mobile;
-        }
-        .main-content__staff-products{
-            font-size: $text-mobile;
-            .products{
-                flex-direction: column;
-                align-items: center;
-                gap: $spacing-m;
-                margin-bottom: $spacing-l;
+        #carouselExampleIndicators{
+            .carousel-inner{
+                .main-content__history{
+                    font-size: $text-mobile;
+                }
+        
+                .main-content__staff-products{
+                    font-size: $text-mobile;
+        
+                    .products{
+                        flex-direction: column;
+                        align-items: center;
+                        gap: $spacing-m;
+                        margin-bottom: $spacing-l;
+                    }
+                }
             }
         }
     }
