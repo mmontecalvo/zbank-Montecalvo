@@ -10,10 +10,8 @@
     z-index: 1000;
 
     .main-header__nav{
-        display: flex;
+        @include flex(row, space-between, center, 0);
         margin: auto;
-        justify-content: space-between;
-        align-items: center;
         padding: $spacing-s;
         max-width: $max-w;
 
@@ -30,13 +28,10 @@
             flex-grow: 0;
 
             .nav__menu{
-                display: flex;
-                justify-content: space-between;
-                gap: $spacing-l;
+                @include flex(row, space-between, start, $spacing-l);
 
                 .menu__link{
-                    font-size: $text-base;
-                    color: $primary;
+                    @include text($primary, $text-base, left, 1em);
                     font-weight: bold;
                     padding: $spacing-s;
                     position: relative;
@@ -105,11 +100,15 @@
 }
 
 @media screen and (max-width: 991px){
-    #main-header .navbar-nav{
-        display: flex;
-        flex-direction: column;
-        padding: $spacing-m;
-        align-items: center;
+    #main-header{
+        .main-header__nav{
+            .navbar-collapse{
+                .nav__menu{
+                    @include flex(column, space-between, center, $spacing-l);
+                    padding: $spacing-m;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 600px){

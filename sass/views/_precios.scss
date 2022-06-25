@@ -2,76 +2,65 @@
 
 #precios {
     .main-content__title{
-        line-height : $lh;
-        font-size: $text-xl;
+        @include text($secondary, $text-xl, center, 1em);
         letter-spacing: $spacing-xs;
-        font-family: $font-title;
-        color: $secondary;
-        text-align: center;
         margin-top: $spacing-l;
     }
+    
     .main-content__item{
         padding: $spacing-m 0;
         max-width: 68rem;
         margin: 0 auto;
+
         .item__icon{
             .icon-box{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 4rem;
-                width: 4rem;
-                animation: fluido 2s ease alternate infinite;
-                background: linear-gradient(60deg, $secondary, $primary, $alternative);
-                background-size: 300%;
-                border-radius: 100%;
+                @include flex(row, center, center, 0);
+                @include icon-box(4rem, 4rem, 100%);
+
                 img{
                     height: 3rem;
                     width: 3rem;
                 }
             }
         }
+
         .item__content{
             font-size: $text-desktop;
+
             .item__title{
-                font-family: $font-title;
-                font-size: $text-m;
-                color: $secondary;
+                @include text($secondary, $text-m, left, 1em);
             }
+
             .item__text{
-                font-size: $text-base;
-                color: $text-color;
-                align-self: start;
-                text-align: justify;
+                @include text($text-color, $text-base, justify, 1em);
                 hyphens: auto;
+                align-self: start;
             }
         }
+
         .item__price{
-            font-size: $text-xl;
+            @include text($primary, $text-xl, left, 1em);
             letter-spacing: $spacing-xs;
-            font-family: $font-title;
-            color: $primary;
             justify-self: end;
         }
     }
+
     .main-content__costs{
         .costs__title{
-            font-family: $font-title;
-            font-size: $text-l;
-            color: $secondary;
-            line-height : $lh;
+            @include text($secondary, $text-l, center, 1em);
             padding: $spacing-m 0;
-            text-align: center;
         }
+
         .item__price{
             font-size: $text-m;
         }
+
         .costs__conditions{
             margin: $spacing-s 0 $spacing-l;
             align-self: start;
+            
             .conditions{
-                font-size: $text-s;
-                color: $text-color;
+                @include text($text-color, $text-s, left, 1em);
                 opacity: 0.5;
                 max-width: 68rem;
                 margin: 0 auto;
@@ -87,24 +76,22 @@
             font-size: $text-l;
             margin-bottom: $spacing-l;
         }
+
         .main-content__item{
             width: 100%;
             padding: 0;
+
             .item__icon{
                 .icon-box{
-                    height: 3rem;
-                    width: 3rem;
                     margin: $spacing-m 0 $spacing-s;
-                    img{
-                        height: 2.5rem;
-                        width: 2.5rem;
-                    }
                 }
             }
+
             .item__content{
                 font-size: $text-intermediate;
                 text-align: center;
             }
+
             .item__price{
                 font-size: $text-l;
             }

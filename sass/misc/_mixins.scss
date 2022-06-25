@@ -1,0 +1,22 @@
+/* MIXINS */
+
+@mixin flex($dir, $just, $alig, $gap){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $alig;
+    gap: $gap;
+}
+
+@mixin icon-box($h, $w, $br){
+    height: $h;
+    width: $w;
+    border-radius: $br;
+}
+
+@mixin text($color, $size, $talig, $lh){
+    color: $color;
+    font-size: $size;
+    text-align: $talig;
+    line-height: $lh;
+}

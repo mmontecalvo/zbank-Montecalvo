@@ -24,8 +24,15 @@ $s-mobile: 0.1rem;
 $s-color: rgba(255, 255, 255, 0.75);
 
 /* FONT-FAMILY */
-$principal: 'Raleway', sans-serif;
-$font-title: 'bakbak One', 'cursive';
+$fonts:(
+    title: ('bakbak One', 'cursive'),
+    text: ('Raleway', sans-serif)
+);
+@each $key, $val in $fonts{
+    .font-#{$key}{
+        font-family: #{$val};
+    }
+}
 
 /* FONT-SIZE REFERENCE */
 $text-desktop: 1rem;
@@ -39,7 +46,6 @@ $text-m: 2.4em;
 $text-base: 1.6em;
 $text-s: 1.4em;
 $text-xs: 1.2em;
-$lh: 1em; /* LINE HEIGHT */
 
 .btn-primary {
     --bs-btn-bg: #141418;

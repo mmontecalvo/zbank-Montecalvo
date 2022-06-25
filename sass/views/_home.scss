@@ -2,12 +2,8 @@
 
 #home{
     .main-content__banner{
-        display: flex;
+        @include flex(row, center, center, 0);
         height: 30rem;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        margin-top: $spacing-s;
 
         .banner__video {
             height: 48rem;
@@ -17,32 +13,23 @@
     .main-content__cover{
         .row{
             .cover{
+                @include flex(column, center, start, $spacing-l);
                 padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: $spacing-l;
                 font-size: $text-desktop;
     
                 .cover__slogan{
-                    line-height : $lh;
-                    font-size: $text-xl;
-                    font-family: $font-title;
-                    color: $secondary;
+                    @include text($secondary, $text-xl, left, 1em);
                     margin: 0;
                 }
     
                 .cover__text{
-                    line-height : $lh;
-                    font-size: $text-m;
+                    @include text($text-color, $text-m, left, 1em);
                     font-weight: bold;
-                    color: $text-color;
                     margin: 0;
                 }
     
                 .cover__dowload{
-                    display: flex;
-                    gap: $spacing-m;
+                    @include flex(row, start, start, $spacing-m);
                     margin: 0;
                     padding: 0;
     
@@ -68,12 +55,10 @@
     }
 
     .main-content__feature{
-        display: flex;
-        justify-content: center;
+        @include flex(row, center, start, $spacing-m);
         flex-wrap: wrap;
-        gap: $spacing-m;
         width: content;
-        margin: $spacing-l 0;
+        margin: $spacing-l*2 0;
 
         .feature{
             width: 27.6rem;
@@ -88,16 +73,9 @@
             grid-template-rows: repeat(4, 1fr);
 
             .feature__icon{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex(row, center, center, 0);
+                @include icon-box(4rem, 4rem, 100%);
                 grid-column: 7/9;
-                height: 4rem;
-                width: 4rem;
-                animation: fluido 2s ease alternate infinite;
-                background: linear-gradient(60deg, $secondary, $primary, $alternative);
-                background-size: 300%;
-                border-radius: 100%;
                 }
 
                 .icon__img{
@@ -106,37 +84,27 @@
                 }
 
             .feature__title{
+                @include text($secondary, $text-m, left, 1em);
                 grid-column: 1/7;
                 grid-row: 1/3;
-                font-family: $font-title;
-                font-size: $text-m;
-                color: $secondary;
-                line-height : $lh;
             }
 
             .feature__text{
+                @include text($text-color, $text-base, justify, 1em);
+                font-weight: bold;
+                hyphens: auto;
                 grid-column: 1/9;
                 grid-row: 3/5;
-                font-size: $text-base;
-                font-weight: bold;
-                color: $text-color;
-                line-height : $lh;
-                text-align: justify;
-                hyphens: auto;
             }
         }
     }
 
     .main-content__steps{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, start, center, 0);
 
         .steps__title{
-            font-family: $font-title;
-            font-size: $text-l;
-            color: $secondary;
-            text-align: center;
+            @include text($secondary, $text-l, center, 1em);
+            margin-top: $spacing-l;
         }
 
         .container{
@@ -146,28 +114,18 @@
                 font-size: $text-desktop;
 
                 .steps__num{
-                    font-family: $font-title;
-                    font-size: 48em;
-                    line-height: $lh;
-                    animation: fluido 2s ease alternate infinite;
-                    background: linear-gradient(60deg, $secondary, $primary, $alternative);
-                    background-size: 300%;
+                    @include text(transparent, 48em, left, 1em);
                     -webkit-background-clip: text;
                     background-clip: text;
-                    color: transparent;
                 }
 
                 .steps-info__box{
                     .steps__subtitle{
-                        font-family: $font-title;
-                        font-size: 7em;
-                        line-height: $lh;
-                        color: $secondary;
+                        @include text($secondary, 7em, left, 1em);
                     }
 
                     .steps__text{
-                        font-size: $text-m;
-                        color: $text-color;
+                        @include text($text-color, $text-m, left, 1em);
                     }
                 }
             }
@@ -275,17 +233,26 @@
     }
 }
 @media screen and (max-width: 767px){
-    .main-content__cover{
-        .row{
-            justify-content: center;
+    #home{
+        .main-content__cover{
+            .row{
+                justify-content: center;
 
-            .cover{
-                width: 90%;
-                text-align: center;
-                margin-bottom: $spacing-l;
-                .cover__dowload{
-                    align-self: center;
-                    gap: 0;
+                .cover{
+                    width: 96%;
+                    margin-bottom: $spacing-l;
+    
+                    .cover__slogan{
+                        text-align: center;
+                    }
+        
+                    .cover__text{
+                        text-align: center;
+                    }
+    
+                    .cover__dowload{
+                        align-self: center;
+                    }
                 }
             }
         }
@@ -305,9 +272,10 @@
             .row{
                 .cover{
                     font-size: $text-mobile;
+
                     .cover__dowload{
                         .dowload__icon{
-                            height: 3rem;
+                            height: 3.6rem;
                         }
                     }
                 }

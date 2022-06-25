@@ -13,7 +13,7 @@ html{
 
 body{
     background: $background;
-    font-family: $principal;
+    font-family: map-get($fonts, text);
     overflow-x: hidden;
     height: auto;
 }
@@ -24,7 +24,7 @@ ul{
 
 a{
     padding: $spacing-s;
-    font-family: $principal;
+    font-family: map-get($fonts, text);
     color: $primary;
     text-decoration: none;
 }
@@ -69,6 +69,12 @@ img{
     0% { background-position: 0% 50%;}
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+.gradient-background{
+    animation: fluido 2s ease alternate infinite;
+    background: linear-gradient(60deg, $secondary, $primary, $alternative);
+    background-size: 300%;
 }
 
 @keyframes fluido {

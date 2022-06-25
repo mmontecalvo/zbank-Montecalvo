@@ -2,8 +2,7 @@
 
 #main-footer{
     position: relative;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, center, 0);
     width: 100%;
     padding: $spacing-m;
     border-top: $b-desktop solid $primary;
@@ -18,8 +17,7 @@
     }
 
     .main-footer__links{
-        display: flex;
-        justify-content: space-between;
+        @include flex(row, space-between, start, 0);
         width: 100%;
         max-width: $max-w;
         margin: auto;
@@ -27,9 +25,8 @@
         .links__nav{
 
             .nav__title{
+                @include text($secondary, $text-m, left, 1em);
                 font-weight: bold;
-                font-size: $text-m;
-                color: $secondary;
             }
 
             .nav__footer-menu{
@@ -70,16 +67,9 @@
         .links__media{
 
             .media__icon{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 4rem;
-                width: 4rem;
+                @include flex(row, center, center, 0);
+                @include icon-box(4rem, 4rem, 100%);
                 margin-bottom: $spacing-s;
-                animation: fluido 2s ease alternate infinite;
-                background: linear-gradient(60deg, $secondary, $primary, $alternative);
-                background-size: 300%;
-                border-radius: 100%;
 
                 &:hover{
                     box-shadow: 0 0 $spacing-s $s-desktop $s-color;
@@ -93,9 +83,7 @@
     }
 
     .main-footer__copyright{
-        text-align: center;
-        font-size: $text-xs;
-        color: $primary;
+        @include text($primary, $text-xs, center, 1em);
         margin-top: $spacing-l;
     }
 }
@@ -106,14 +94,11 @@
         box-shadow: 0 0 $spacing-s $s-mobile $primary;
 
         .main-footer__links{
-            flex-direction: column;
-            align-items: center;
-            gap: $spacing-m;
+            @include flex(column, center, center, $spacing-m);
             text-align: center;
             
             .media{
-                display: flex;
-                gap: $spacing-s;
+                @include flex(row, center, center, $spacing-s);
                 
                 &__icon:hover{
                         box-shadow: 0 0 $spacing-s $s-mobile $s-color;

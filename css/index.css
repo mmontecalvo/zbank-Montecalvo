@@ -7,9 +7,14 @@
 /* BORDERS */
 /* SHADOWS */
 /* FONT-FAMILY */
+.font-title {
+  font-family: bakbak One, cursive; }
+
+.font-text {
+  font-family: Raleway, sans-serif; }
+
 /* FONT-SIZE REFERENCE */
 /* FONT-SIZES */
-/* LINE HEIGHT */
 .btn-primary {
   --bs-btn-bg: #141418;
   --bs-btn-border-color: #141418;
@@ -84,6 +89,11 @@ img {
   100% {
     background-position: 0% 50%; } }
 
+.gradient-background {
+  animation: fluido 2s ease alternate infinite;
+  background: linear-gradient(60deg, #f7547f, #9460b5, #5ee6bb);
+  background-size: 300%; }
+
 @keyframes fluido {
   0% {
     background-position: 0 50%; }
@@ -92,6 +102,7 @@ img {
   100% {
     background-position: 0 50%; } }
 
+/* MIXINS */
 /* PARTIALS */
 /* HEADER */
 #main-header {
@@ -104,9 +115,11 @@ img {
   z-index: 1000; }
   #main-header .main-header__nav {
     display: flex;
-    margin: auto;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 0;
+    margin: auto;
     padding: 1rem;
     max-width: 120rem; }
     #main-header .main-header__nav .navbar-brand .logo__img {
@@ -118,11 +131,15 @@ img {
       flex-grow: 0; }
       #main-header .main-header__nav .navbar-collapse .nav__menu {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: start;
         gap: 3rem; }
         #main-header .main-header__nav .navbar-collapse .nav__menu .menu__link {
-          font-size: 1.6em;
           color: #9460b5;
+          font-size: 1.6em;
+          text-align: left;
+          line-height: 1em;
           font-weight: bold;
           padding: 1rem;
           position: relative;
@@ -170,11 +187,13 @@ img {
             border-right: 2px solid #5ee6bb; }
 
 @media screen and (max-width: 991px) {
-  #main-header .navbar-nav {
+  #main-header .main-header__nav .navbar-collapse .nav__menu {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    align-items: center; } }
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem; } }
 
 @media screen and (max-width: 600px) {
   #main-header {
@@ -186,6 +205,9 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
   width: 100%;
   padding: 2rem;
   border-top: 0.2rem solid #9460b5;
@@ -196,14 +218,19 @@ img {
     padding: 0; }
   #main-footer .main-footer__links {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: start;
+    gap: 0;
     width: 100%;
     max-width: 120rem;
     margin: auto; }
     #main-footer .main-footer__links .links__nav .nav__title {
-      font-weight: bold;
+      color: #f7547f;
       font-size: 2.4em;
-      color: #f7547f; }
+      text-align: left;
+      line-height: 1em;
+      font-weight: bold; }
     #main-footer .main-footer__links .links__nav .nav__footer-menu .footer-menu__item {
       margin: 1rem 0; }
       #main-footer .main-footer__links .links__nav .nav__footer-menu .footer-menu__item .footer-menu__link {
@@ -224,23 +251,23 @@ img {
           height: 5rem; }
     #main-footer .main-footer__links .links__media .media__icon {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      gap: 0;
       height: 4rem;
       width: 4rem;
-      margin-bottom: 1rem;
-      animation: fluido 2s ease alternate infinite;
-      background: linear-gradient(60deg, #f7547f, #9460b5, #5ee6bb);
-      background-size: 300%;
-      border-radius: 100%; }
+      border-radius: 100%;
+      margin-bottom: 1rem; }
       #main-footer .main-footer__links .links__media .media__icon:hover {
         box-shadow: 0 0 1rem 0.2rem rgba(255, 255, 255, 0.75); }
       #main-footer .main-footer__links .links__media .media__icon .media__icon--design {
         height: 2.5rem; }
   #main-footer .main-footer__copyright {
-    text-align: center;
-    font-size: 1.2em;
     color: #9460b5;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1em;
     margin-top: 3rem; }
 
 @media screen and (max-width: 600px) {
@@ -248,12 +275,17 @@ img {
     border-top: 0.1rem solid #9460b5;
     box-shadow: 0 0 1rem 0.1rem #9460b5; }
     #main-footer .main-footer__links {
+      display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       gap: 2rem;
       text-align: center; }
       #main-footer .main-footer__links .media {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         gap: 1rem; }
         #main-footer .main-footer__links .media__icon:hover {
           box-shadow: 0 0 1rem 0.1rem rgba(255, 255, 255, 0.75); } }
@@ -262,35 +294,40 @@ img {
 /* HOME */
 #home .main-content__banner {
   display: flex;
-  height: 30rem;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  margin-top: 1rem; }
+  gap: 0;
+  height: 30rem; }
   #home .main-content__banner .banner__video {
     height: 48rem; }
 
 #home .main-content__cover .row .cover {
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
   gap: 3rem;
+  padding: 0;
   font-size: 1rem; }
   #home .main-content__cover .row .cover .cover__slogan {
-    line-height: 1em;
-    font-size: 5.4em;
-    font-family: "bakbak One", "cursive";
     color: #f7547f;
+    font-size: 5.4em;
+    text-align: left;
+    line-height: 1em;
     margin: 0; }
   #home .main-content__cover .row .cover .cover__text {
-    line-height: 1em;
-    font-size: 2.4em;
-    font-weight: bold;
     color: #c3c6e9;
+    font-size: 2.4em;
+    text-align: left;
+    line-height: 1em;
+    font-weight: bold;
     margin: 0; }
   #home .main-content__cover .row .cover .cover__dowload {
     display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
     gap: 2rem;
     margin: 0;
     padding: 0; }
@@ -307,11 +344,13 @@ img {
 
 #home .main-content__feature {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: start;
   gap: 2rem;
+  flex-wrap: wrap;
   width: content;
-  margin: 3rem 0; }
+  margin: 6rem 0; }
   #home .main-content__feature .feature {
     width: 27.6rem;
     height: 14rem;
@@ -325,66 +364,67 @@ img {
     grid-template-rows: repeat(4, 1fr); }
     #home .main-content__feature .feature .feature__icon {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      grid-column: 7/9;
+      gap: 0;
       height: 4rem;
       width: 4rem;
-      animation: fluido 2s ease alternate infinite;
-      background: linear-gradient(60deg, #f7547f, #9460b5, #5ee6bb);
-      background-size: 300%;
-      border-radius: 100%; }
+      border-radius: 100%;
+      grid-column: 7/9; }
     #home .main-content__feature .feature .icon__img {
       height: 80%;
       width: 80%; }
     #home .main-content__feature .feature .feature__title {
-      grid-column: 1/7;
-      grid-row: 1/3;
-      font-family: "bakbak One", "cursive";
-      font-size: 2.4em;
       color: #f7547f;
-      line-height: 1em; }
-    #home .main-content__feature .feature .feature__text {
-      grid-column: 1/9;
-      grid-row: 3/5;
-      font-size: 1.6em;
-      font-weight: bold;
-      color: #c3c6e9;
+      font-size: 2.4em;
+      text-align: left;
       line-height: 1em;
+      grid-column: 1/7;
+      grid-row: 1/3; }
+    #home .main-content__feature .feature .feature__text {
+      color: #c3c6e9;
+      font-size: 1.6em;
       text-align: justify;
-      hyphens: auto; }
+      line-height: 1em;
+      font-weight: bold;
+      hyphens: auto;
+      grid-column: 1/9;
+      grid-row: 3/5; }
 
 #home .main-content__steps {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  justify-content: start;
+  align-items: center;
+  gap: 0; }
   #home .main-content__steps .steps__title {
-    font-family: "bakbak One", "cursive";
-    font-size: 3.6em;
     color: #f7547f;
-    text-align: center; }
+    font-size: 3.6em;
+    text-align: center;
+    line-height: 1em;
+    margin-top: 3rem; }
   #home .main-content__steps .container {
     max-width: 100%; }
     #home .main-content__steps .container .steps {
       font-size: 1rem; }
       #home .main-content__steps .container .steps .steps__num {
-        font-family: "bakbak One", "cursive";
+        color: transparent;
         font-size: 48em;
+        text-align: left;
         line-height: 1em;
-        animation: fluido 2s ease alternate infinite;
-        background: linear-gradient(60deg, #f7547f, #9460b5, #5ee6bb);
-        background-size: 300%;
         -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent; }
+        background-clip: text; }
       #home .main-content__steps .container .steps .steps-info__box .steps__subtitle {
-        font-family: "bakbak One", "cursive";
+        color: #f7547f;
         font-size: 7em;
-        line-height: 1em;
-        color: #f7547f; }
+        text-align: left;
+        line-height: 1em; }
       #home .main-content__steps .container .steps .steps-info__box .steps__text {
+        color: #c3c6e9;
         font-size: 2.4em;
-        color: #c3c6e9; }
+        text-align: left;
+        line-height: 1em; }
     #home .main-content__steps .container .steps:nth-of-type(1) .steps__img {
       transform: rotate(15deg);
       max-height: 54rem;
@@ -441,15 +481,17 @@ img {
       left: 0rem; } }
 
 @media screen and (max-width: 767px) {
-  .main-content__cover .row {
+  #home .main-content__cover .row {
     justify-content: center; }
-    .main-content__cover .row .cover {
-      width: 90%;
-      text-align: center;
+    #home .main-content__cover .row .cover {
+      width: 96%;
       margin-bottom: 3rem; }
-      .main-content__cover .row .cover .cover__dowload {
-        align-self: center;
-        gap: 0; } }
+      #home .main-content__cover .row .cover .cover__slogan {
+        text-align: center; }
+      #home .main-content__cover .row .cover .cover__text {
+        text-align: center; }
+      #home .main-content__cover .row .cover .cover__dowload {
+        align-self: center; } }
 
 @media screen and (max-width: 600px) {
   /* BANNER */
@@ -460,7 +502,7 @@ img {
   #home .main-content__cover .row .cover {
     font-size: 0.66rem; }
     #home .main-content__cover .row .cover .cover__dowload .dowload__icon {
-      height: 3rem; }
+      height: 3.6rem; }
   #home .main-content__steps .container {
     max-width: 98%; }
     #home .main-content__steps .container .steps {
@@ -492,19 +534,38 @@ img {
 #quienessomos #carouselExampleIndicators .carousel-indicators button {
   background-color: #9460b5; }
 
+#quienessomos #carouselExampleIndicators .carousel-inner--history {
+  background-image: url(../img/quienesomos/history.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh; }
+
+#quienessomos #carouselExampleIndicators .carousel-inner--values {
+  background-image: url(../img/quienesomos/values.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh; }
+
+#quienessomos #carouselExampleIndicators .carousel-inner--staff-products {
+  background-image: url(../img/quienesomos/staff-products.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh; }
+
 #quienessomos #carouselExampleIndicators .carousel-inner .subtitle {
-  font-family: "bakbak One", "cursive";
-  font-size: 3.6em;
-  line-height: 1em;
   color: #f7547f;
+  font-size: 3.6em;
+  text-align: left;
+  line-height: 1em;
   max-width: 120rem;
   width: 90%;
   margin: 0 auto 3rem; }
 
 #quienessomos #carouselExampleIndicators .carousel-inner .text {
-  font-size: 2.4em;
   color: #c3c6e9;
+  font-size: 2.4em;
   text-align: justify;
+  line-height: 1em;
   hyphens: auto;
   max-width: 120rem;
   width: 90%;
@@ -515,31 +576,21 @@ img {
   color: #9460b5; }
 
 #quienessomos #carouselExampleIndicators .carousel-inner .main-content__history {
-  background-image: url(../img/quienesomos/buenosaires.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 90vh;
   font-size: 1rem; }
   #quienessomos #carouselExampleIndicators .carousel-inner .main-content__history .main-content__title {
-    line-height: 1em;
-    font-size: 5.4em;
-    font-family: "bakbak One", "cursive";
     color: #f7547f;
+    font-size: 5.4em;
     text-align: center;
+    line-height: 1em;
     margin: 3rem 0; }
 
 #quienessomos #carouselExampleIndicators .carousel-inner .main-content__values {
-  background-image: url(../img/quienesomos/nature.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 90vh;
   font-size: 1rem; }
   #quienessomos #carouselExampleIndicators .carousel-inner .main-content__values .subtitle {
     padding: 3rem 0 0;
-    text-align: center;
-    font-family: "bakbak One", "cursive";
-    font-size: 3.6em;
     color: #f7547f;
+    font-size: 3.6em;
+    text-align: center;
     line-height: 1em; }
   #quienessomos #carouselExampleIndicators .carousel-inner .main-content__values .values__value-box {
     padding: 1rem;
@@ -549,23 +600,20 @@ img {
     max-width: 120rem;
     width: 90%; }
     #quienessomos #carouselExampleIndicators .carousel-inner .main-content__values .values__value-box .value-box__title {
+      color: #f7547f;
       font-size: 2.4em;
+      text-align: left;
       line-height: 1em;
       letter-spacing: 0.1rem;
-      font-family: "bakbak One", "cursive";
-      color: #f7547f;
       margin-bottom: 1rem; }
     #quienessomos #carouselExampleIndicators .carousel-inner .main-content__values .values__value-box .value-box__text {
-      font-size: 1.6em;
       color: #c3c6e9;
+      font-size: 1.6em;
       text-align: justify;
+      line-height: 1em;
       hyphens: auto; }
 
 #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products {
-  background-image: url(../img/quienesomos/personal.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 90vh;
   font-size: 1rem; }
   #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products .subtitle {
     padding: 3rem 0 0;
@@ -574,18 +622,23 @@ img {
     font-size: 5.4em; }
   #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products .products {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    column-gap: 8rem;
+    align-items: start;
+    gap: 8rem;
     margin-bottom: 2rem; }
     #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products .products .list__title {
-      font-size: 3.6em;
-      letter-spacing: 0.1rem;
-      font-family: "bakbak One", "cursive";
       color: #f7547f;
+      font-size: 3.6em;
+      text-align: left;
+      line-height: 1em;
+      letter-spacing: 0.1rem;
       margin-bottom: 1rem; }
     #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products .products .list__item {
-      font-size: 2.4em;
       color: #c3c6e9;
+      font-size: 2.4em;
+      text-align: left;
+      line-height: 1em;
       font-weight: bold; }
       #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products .products .list__item img {
         height: 2.4rem;
@@ -607,19 +660,20 @@ img {
   #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products {
     font-size: 0.66rem; }
     #quienessomos #carouselExampleIndicators .carousel-inner .main-content__staff-products .products {
+      display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       gap: 2rem;
       margin-bottom: 3rem; } }
 
 /* PRECIOS */
 #precios .main-content__title {
-  line-height: 1em;
-  font-size: 5.4em;
-  letter-spacing: 0.1rem;
-  font-family: "bakbak One", "cursive";
   color: #f7547f;
+  font-size: 5.4em;
   text-align: center;
+  line-height: 1em;
+  letter-spacing: 0.1rem;
   margin-top: 3rem; }
 
 #precios .main-content__item {
@@ -628,13 +682,12 @@ img {
   margin: 0 auto; }
   #precios .main-content__item .item__icon .icon-box {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 0;
     height: 4rem;
     width: 4rem;
-    animation: fluido 2s ease alternate infinite;
-    background: linear-gradient(60deg, #f7547f, #9460b5, #5ee6bb);
-    background-size: 300%;
     border-radius: 100%; }
     #precios .main-content__item .item__icon .icon-box img {
       height: 3rem;
@@ -642,29 +695,31 @@ img {
   #precios .main-content__item .item__content {
     font-size: 1rem; }
     #precios .main-content__item .item__content .item__title {
-      font-family: "bakbak One", "cursive";
+      color: #f7547f;
       font-size: 2.4em;
-      color: #f7547f; }
+      text-align: left;
+      line-height: 1em; }
     #precios .main-content__item .item__content .item__text {
-      font-size: 1.6em;
       color: #c3c6e9;
-      align-self: start;
+      font-size: 1.6em;
       text-align: justify;
-      hyphens: auto; }
+      line-height: 1em;
+      hyphens: auto;
+      align-self: start; }
   #precios .main-content__item .item__price {
-    font-size: 5.4em;
-    letter-spacing: 0.1rem;
-    font-family: "bakbak One", "cursive";
     color: #9460b5;
+    font-size: 5.4em;
+    text-align: left;
+    line-height: 1em;
+    letter-spacing: 0.1rem;
     justify-self: end; }
 
 #precios .main-content__costs .costs__title {
-  font-family: "bakbak One", "cursive";
-  font-size: 3.6em;
   color: #f7547f;
+  font-size: 3.6em;
+  text-align: center;
   line-height: 1em;
-  padding: 2rem 0;
-  text-align: center; }
+  padding: 2rem 0; }
 
 #precios .main-content__costs .item__price {
   font-size: 2.4em; }
@@ -673,8 +728,10 @@ img {
   margin: 1rem 0 3rem;
   align-self: start; }
   #precios .main-content__costs .costs__conditions .conditions {
-    font-size: 1.4em;
     color: #c3c6e9;
+    font-size: 1.4em;
+    text-align: left;
+    line-height: 1em;
     opacity: 0.5;
     max-width: 68rem;
     margin: 0 auto; }
@@ -687,12 +744,7 @@ img {
     width: 100%;
     padding: 0; }
     #precios .main-content__item .item__icon .icon-box {
-      height: 3rem;
-      width: 3rem;
       margin: 2rem 0 1rem; }
-      #precios .main-content__item .item__icon .icon-box img {
-        height: 2.5rem;
-        width: 2.5rem; }
     #precios .main-content__item .item__content {
       font-size: 0.8rem;
       text-align: center; }
@@ -703,12 +755,11 @@ img {
 
 /* SEGURIDAD */
 #seguridad .main-content__title {
-  line-height: 1em;
-  font-size: 5.4em;
-  letter-spacing: 0.1rem;
-  font-family: "bakbak One", "cursive";
   color: #f7547f;
+  font-size: 5.4em;
   text-align: center;
+  line-height: 1em;
+  letter-spacing: 0.1rem;
   margin-top: 3rem; }
 
 #seguridad .main-content__item {
@@ -719,9 +770,10 @@ img {
   gap: 2rem;
   font-size: 1rem; }
   #seguridad .main-content__item .item__text {
+    color: #c3c6e9;
     font-size: 2.4em;
     text-align: center;
-    color: #c3c6e9;
+    line-height: 1em;
     grid-column: 1/13;
     grid-row: 1/3;
     justify-self: center; }
@@ -738,15 +790,17 @@ img {
     grid-template-columns: repeat(6, 1fr);
     align-items: center; }
     #seguridad .main-content__item .item__characteristic .characteristic__title {
-      font-family: "bakbak One", "cursive";
-      font-size: 2.4em;
       color: #f7547f;
+      font-size: 2.4em;
+      text-align: left;
+      line-height: 1em;
       grid-row: 1;
       grid-column: 1/7; }
     #seguridad .main-content__item .item__characteristic .characteristic__text {
-      font-size: 1.6em;
       color: #c3c6e9;
+      font-size: 1.6em;
       text-align: justify;
+      line-height: 1.5em;
       hyphens: auto;
       grid-row: 2/5;
       grid-column: 1/7; }
@@ -771,14 +825,15 @@ img {
   #seguridad .main-content__feature .feature__info {
     font-size: 1rem; }
     #seguridad .main-content__feature .feature__info .info__title {
+      color: #f7547f;
       font-size: 5.4em;
-      line-height: 1em;
-      font-family: "bakbak One", "cursive";
-      color: #f7547f; }
+      text-align: left;
+      line-height: 1em; }
     #seguridad .main-content__feature .feature__info .info__text {
-      font-size: 2.4em;
       color: #c3c6e9;
+      font-size: 2.4em;
       text-align: justify;
+      line-height: 1.5em;
       hyphens: auto; }
   #seguridad .main-content__feature .feature__img img {
     height: 100%;
@@ -800,8 +855,9 @@ img {
   #seguridad .main-content__item {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: start;
     align-items: center;
+    gap: 1rem;
     font-size: 0.8rem;
     width: 90%;
     margin: auto;
@@ -814,7 +870,7 @@ img {
       width: auto;
       max-height: 40rem;
       margin: 2rem 0; }
-  #seguridad #seguridad .main-content__feature .feature__info .info__title {
+  #seguridad .main-content__feature .feature__info .info__title {
     text-align: center; } }
 
 @media screen and (max-width: 600px) {
@@ -829,25 +885,28 @@ img {
 #contacto .main-content__contact-forms {
   font-size: 1rem; }
   #contacto .main-content__contact-forms .main-content__title {
-    line-height: 1em;
-    font-size: 5.4em;
-    letter-spacing: 0.1rem;
-    font-family: "bakbak One", "cursive";
     color: #f7547f;
+    font-size: 5.4em;
     text-align: center;
+    line-height: 1em;
+    letter-spacing: 0.1rem;
     margin-top: 3rem; }
   #contacto .main-content__contact-forms .contact-forms__text {
-    font-size: 2.4em;
     color: #c3c6e9;
+    font-size: 2.4em;
+    text-align: left;
+    line-height: 1em;
     width: auto;
     justify-self: center;
     margin: 3rem 0; }
   #contacto .main-content__contact-forms .contact-forms__way-box {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    width: content;
+    align-items: start;
     gap: 2rem;
+    flex-wrap: wrap;
+    width: content;
     margin-bottom: 3rem; }
     #contacto .main-content__contact-forms .contact-forms__way-box .contact-forms__way {
       padding: 1rem;
@@ -858,20 +917,22 @@ img {
       grid-template-columns: repeat(6, 1fr);
       align-items: start; }
       #contacto .main-content__contact-forms .contact-forms__way-box .contact-forms__way .way__title {
-        font-family: "bakbak One", "cursive";
-        font-size: 2.4em;
-        letter-spacing: 0.1rem;
         color: #f7547f;
+        font-size: 2.4em;
+        text-align: left;
+        line-height: 1em;
+        letter-spacing: 0.1rem;
         margin: 0;
         grid-row: 1;
         grid-column: 1/6; }
       #contacto .main-content__contact-forms .contact-forms__way-box .contact-forms__way .way__text {
-        font-size: 1.6em;
         color: #c3c6e9;
+        font-size: 1.6em;
+        text-align: justify;
+        line-height: 1.5em;
+        hyphens: auto;
         grid-row: 2/5;
         grid-column: 1/7;
-        text-align: justify;
-        hyphens: auto;
         padding-top: 0.1rem; }
       #contacto .main-content__contact-forms .contact-forms__way-box .contact-forms__way .way__icon {
         grid-row: 1;
@@ -881,61 +942,72 @@ img {
         width: 4rem; }
       #contacto .main-content__contact-forms .contact-forms__way-box .contact-forms__way ul {
         display: flex;
+        justify-self: end;
         right: 0;
         grid-row: 1;
-        grid-column: 6;
-        justify-self: end; }
+        grid-column: 6; }
 
-.main-content__form .form__title {
-  font-size: 2.4em;
-  letter-spacing: 0.1rem;
-  font-family: "bakbak One", "cursive";
+#contacto .main-content__form .form__title {
   color: #f7547f;
-  margin: 3rem 0;
-  text-align: center; }
+  font-size: 2.4em;
+  text-align: center;
+  line-height: 1em;
+  letter-spacing: 0.1rem;
+  margin: 3rem 0; }
 
-.main-content__form form {
+#contacto .main-content__form form {
   width: 90%;
   margin: auto; }
-  .main-content__form form .form__write {
+  #contacto .main-content__form form .form__write {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    gap: 0;
     margin: 3rem 0 1rem; }
-    .main-content__form form .form__write .form-floating .contact__box {
+    #contacto .main-content__form form .form__write .form-floating .contact__box, #contacto .main-content__form form .form__write .form-floating .contact__box--text-area {
       margin-bottom: 2rem;
       height: 7rem;
       background: #141418;
       color: #c3c6e9;
-      font-weight: bold;
       font-size: 1.6em;
+      text-align: left;
+      line-height: 1em;
+      font-weight: bold;
       border: none;
       border-bottom: 0.2rem solid #9460b5; }
-    .main-content__form form .form__write .form-floating textarea {
-      border: none; }
-    .main-content__form form .form__write .form-floating label {
-      padding: 1rem;
+    #contacto .main-content__form form .form__write .form-floating .contact__box--text-area {
+      height: 20rem; }
+    #contacto .main-content__form form .form__write .form-floating label {
       color: #9460b5;
-      font-family: "Raleway", sans-serif;
-      font-size: 1.6em; }
-    .main-content__form form .form__write .form-floating .form-control:focus {
+      font-size: 1.6em;
+      text-align: left;
+      line-height: 1em;
+      padding: 1rem; }
+    #contacto .main-content__form form .form__write .form-floating .form-control:focus {
       box-shadow: 0 0 1rem 0.2rem #9460b5; }
-  .main-content__form form .form-check .form-check-input {
+  #contacto .main-content__form form .form-check .form-check-input {
     height: 1.6rem;
     width: 1.6rem; }
-    .main-content__form form .form-check .form-check-input:checked {
+    #contacto .main-content__form form .form-check .form-check-input:checked {
       background-color: #9460b5;
       border-color: #9460b5; }
-  .main-content__form form .form-check .form__textcheckbox {
-    font-size: 1.4em;
+  #contacto .main-content__form form .form-check .form__textcheckbox {
     color: #c3c6e9;
+    font-size: 1.4em;
+    text-align: left;
+    line-height: 1em;
+    line-height: 1.5em;
     padding-left: 1rem;
     margin-bottom: 2rem; }
-  .main-content__form form .form__send {
+  #contacto .main-content__form form .form__send {
     height: 5rem;
     width: 100%;
     color: #c3c6e9;
-    font-weight: bold;
     font-size: 1.6em;
+    text-align: center;
+    line-height: 1em;
+    font-weight: bold;
     margin-bottom: 3rem; }
 
 .form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown), .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {

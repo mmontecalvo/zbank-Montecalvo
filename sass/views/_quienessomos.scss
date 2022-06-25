@@ -8,20 +8,30 @@
             }
         }
         .carousel-inner{
+            $sections: (
+                history: 'history',
+                values: 'values',
+                staff-products: 'staff-products'
+            );
+
+            @each $val, $key in $sections{
+                &--#{$val}{
+                    background-image: url(../img/quienesomos/#{$val}.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    min-height: 90vh;
+                }
+            }
+
             .subtitle{
-                font-family: $font-title;
-                font-size: $text-l;
-                line-height : $lh;
-                color: $secondary;
+                @include text($secondary, $text-l, left, 1em);
                 max-width: $max-w;
                 width: 90%;
                 margin: 0 auto $spacing-l;
             }
 
             .text{
-                font-size: $text-m;
-                color: $text-color;
-                text-align: justify;
+                @include text($text-color, $text-m, justify, 1em);
                 hyphens: auto;
                 max-width: $max-w;
                 width: 90%;
@@ -34,36 +44,20 @@
             }
 
             .main-content__history{
-                background-image: url(../img/quienesomos/buenosaires.jpg);
-                background-size: cover;
-                background-position: center;
-                min-height: 90vh;
                 font-size: $text-desktop;
 
                 .main-content__title{
-                    line-height : $lh;
-                    font-size: $text-xl;
-                    font-family: $font-title;
-                    color: $secondary;
-                    text-align: center;
+                    @include text($secondary, $text-xl, center, 1em);
                     margin: $spacing-l 0;
                 }
             }
 
             .main-content__values{
-                background-image: url(../img/quienesomos/nature.jpg);
-                background-size: cover;
-                background-position: center;
-                min-height: 90vh;
                 font-size: $text-desktop;
 
                 .subtitle{
                     padding: $spacing-l 0 0;
-                    text-align: center;
-                    font-family: $font-title;
-                    font-size: $text-l;
-                    color: $secondary;
-                    line-height : $lh;
+                    @include text($secondary, $text-l, center, 1em);
                 }
 
                 .values__value-box{
@@ -75,28 +69,19 @@
                     width: 90%;
 
                     .value-box__title{
-                        font-size: $text-m;
-                        line-height: $lh;
+                        @include text($secondary, $text-m, left, 1em);
                         letter-spacing: $spacing-xs;
-                        font-family: $font-title;
-                        color: $secondary;
                         margin-bottom: $spacing-s;
                     }
 
                     .value-box__text{
-                        font-size: $text-base;
-                        color: $text-color;
-                        text-align: justify;
+                        @include text($text-color, $text-base, justify, 1em);
                         hyphens: auto;
                     }
                 }    
             }
 
             .main-content__staff-products{
-                background-image: url(../img/quienesomos/personal.jpg);
-                background-size: cover;
-                background-position: center;
-                min-height: 90vh;
                 font-size: $text-desktop;
 
                 .subtitle{
@@ -107,22 +92,17 @@
                 }
 
                 .products{
-                    display: flex;
-                    justify-content: center;
-                    column-gap: 8rem;
+                    @include flex(row, center, start, 8rem);
                     margin-bottom: $spacing-m;
 
                     .list__title{
-                        font-size: $text-l;
+                        @include text($secondary, $text-l, left, 1em);
                         letter-spacing: $spacing-xs;
-                        font-family: $font-title;
-                        color: $secondary;
                         margin-bottom: $spacing-s;
                     }
 
                     .list__item{
-                        font-size: $text-m;
-                        color: $text-color;
+                        @include text($text-color, $text-m, left, 1em);
                         font-weight: bold;
                         
                         img{
@@ -169,9 +149,7 @@
                     font-size: $text-mobile;
         
                     .products{
-                        flex-direction: column;
-                        align-items: center;
-                        gap: $spacing-m;
+                        @include flex(column, center, center, $spacing-m);
                         margin-bottom: $spacing-l;
                     }
                 }
