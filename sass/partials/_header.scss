@@ -15,8 +15,15 @@
         padding: $spacing-s;
         max-width: $max-w;
 
-        .navbar-brand .logo__img{
-            height: 6rem;
+        .navbar-brand{
+            .logo__img{
+                height: 6rem;
+                transition: transform 0.5s;
+
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
         }
         
         .navbar-toggler{

@@ -123,7 +123,10 @@ img {
     padding: 1rem;
     max-width: 120rem; }
     #main-header .main-header__nav .navbar-brand .logo__img {
-      height: 6rem; }
+      height: 6rem;
+      transition: transform 0.5s; }
+      #main-header .main-header__nav .navbar-brand .logo__img:hover {
+        transform: scale(1.05); }
     #main-header .main-header__nav .navbar-toggler {
       border: 0.2rem solid #9460b5;
       background-color: #9460b5; }
