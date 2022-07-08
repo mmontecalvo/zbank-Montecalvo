@@ -25,7 +25,7 @@ ul{
 a{
     padding: $spacing-s;
     font-family: map-get($fonts, text);
-    color: $primary;
+    color: $text-color;
     text-decoration: none;
 }
 
@@ -35,6 +35,11 @@ img{
 
 .backfill{
     height: 9.7rem;
+}
+@media screen and (max-width: 600px){
+    .backfill{
+        height: 7.7rem;
+    }
 }
 
 /* MAIN */

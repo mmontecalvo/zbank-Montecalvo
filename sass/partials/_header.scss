@@ -122,6 +122,14 @@
     #main-header{
         border-bottom: $b-mobile solid $primary;
         box-shadow: 0 0 $spacing-s $s-mobile $primary;
+        
+        .main-header__nav{
+            .navbar-brand{
+                .logo__img{
+                    height: 4rem;
+                }
+            }
+        }
     }
 }
   

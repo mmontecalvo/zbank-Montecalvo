@@ -1,0 +1,29 @@
+/* 404 ERROR PAGE */
+
+#error-page{
+    height: 90vh;
+    @include flex(column, start, center, 5rem);
+    font-size: $text-desktop;
+    
+    strong{
+        @include text($secondary, 20em, center, 1em);
+    }
+
+    span{
+        @include text($text-color, $text-l, center, 1em);
+    }
+    button{
+        @include text($text-color, $text-m, center, 1em);
+        height: 5rem;
+        font-weight: bold;
+        --bs-link-hover-color: $text-color;
+
+        
+    }
+}
+
+@media screen and (max-width: 600px){
+    #error-page{
+        font-size: $text-mobile;
+    }
+}

@@ -48,7 +48,7 @@ ul {
 a {
   padding: 1rem;
   font-family: "Raleway", sans-serif;
-  color: #9460b5;
+  color: #c3c6e9;
   text-decoration: none; }
 
 img {
@@ -56,6 +56,10 @@ img {
 
 .backfill {
   height: 9.7rem; }
+
+@media screen and (max-width: 600px) {
+  .backfill {
+    height: 7.7rem; } }
 
 /* MAIN */
 .main-content {
@@ -201,7 +205,9 @@ img {
 @media screen and (max-width: 600px) {
   #main-header {
     border-bottom: 0.1rem solid #9460b5;
-    box-shadow: 0 0 1rem 0.1rem #9460b5; } }
+    box-shadow: 0 0 1rem 0.1rem #9460b5; }
+    #main-header .main-header__nav .navbar-brand .logo__img {
+      height: 4rem; } }
 
 /* FOOTER */
 #main-footer {
@@ -722,6 +728,7 @@ img {
   font-size: 3.6em;
   text-align: center;
   line-height: 1em;
+  margin-top: 9rem;
   padding: 2rem 0; }
 
 #precios .main-content__costs .item__price {
@@ -749,12 +756,17 @@ img {
     #precios .main-content__item .item__icon .icon-box {
       margin: 2rem 0 1rem; }
     #precios .main-content__item .item__content {
-      font-size: 0.8rem;
-      text-align: center; }
+      font-size: 0.8rem; }
+      #precios .main-content__item .item__content .item__title {
+        text-align: center; }
     #precios .main-content__item .item__price {
       font-size: 3.6em; }
-  .main-content__costs .costs__title {
-    font-size: 3rem; } }
+  #precios .main-content__costs .costs__title {
+    font-size: 3rem; }
+  #precios .main-content__costs .item__price {
+    font-size: 2.4em; }
+  #precios .main-content__costs .costs__conditions {
+    margin-top: 3rem; } }
 
 /* SEGURIDAD */
 #seguridad .main-content__title {
@@ -1033,3 +1045,35 @@ img {
     font-size: 2em;
     text-align: center;
     margin: 2rem 0; } }
+
+/* 404 ERROR PAGE */
+#error-page {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5rem;
+  font-size: 1rem; }
+  #error-page strong {
+    color: #f7547f;
+    font-size: 20em;
+    text-align: center;
+    line-height: 1em; }
+  #error-page span {
+    color: #c3c6e9;
+    font-size: 3.6em;
+    text-align: center;
+    line-height: 1em; }
+  #error-page button {
+    color: #c3c6e9;
+    font-size: 2.4em;
+    text-align: center;
+    line-height: 1em;
+    height: 5rem;
+    font-weight: bold;
+    --bs-link-hover-color: $text-color; }
+
+@media screen and (max-width: 600px) {
+  #error-page {
+    font-size: 0.66rem; } }
